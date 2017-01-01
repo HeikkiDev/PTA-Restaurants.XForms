@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PTA_Restaurants.XForms.Views.RestaurantDetailDailyMenuPage">
+             x:Class="PTA_Restaurants.XForms.Views.RestaurantDetailDailyMenuPage"
+             xmlns:local="clr-namespace:PTA_Restaurants.XForms;assembly=PTA_Restaurants.XForms">
+  
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:DailyMenuTemplateSelector x:Key="HeaderTemplateSelector"></local:DailyMenuTemplateSelector>
+    </ResourceDictionary>
+  </ContentPage.Resources>
 
   <StackLayout Padding="0,10,0,0">
 
@@ -44,6 +51,7 @@
     <!-- Primeros, Segundos, Postres, etc. -->
     <ListView 
               ItemsSource="{Binding MenuDetailList}"
+              ItemTemplate="{StaticResource HeaderTemplateSelector}" 
               SeparatorVisibility="Default"
               SeparatorColor="#3498db"
               HasUnevenRows="True"
@@ -54,7 +62,8 @@
       <ListView.SeparatorColor>
         <OnPlatform x:TypeArguments="Color" iOS="Transparent"/>
       </ListView.SeparatorColor>
-      <ListView.ItemTemplate>
+    
+      <!--<ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
 
@@ -71,7 +80,8 @@
 
           </ViewCell>
         </DataTemplate>
-      </ListView.ItemTemplate>
+      </ListView.ItemTemplate>-->
+    
     </ListView>
 
    

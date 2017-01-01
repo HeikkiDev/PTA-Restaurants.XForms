@@ -29,6 +29,34 @@ namespace PTA_Restaurants.XForms.ViewModels
             set { isVisible = value; OnPropertyChanged(); }
         }
 
+        private bool isVisiblePrice1 = false;
+        public bool IsVisiblePrice1
+        {
+            get { return isVisiblePrice1; }
+            set { isVisiblePrice1 = value; OnPropertyChanged(); }
+        }
+
+        private bool isVisiblePrice2 = false;
+        public bool IsVisiblePrice2
+        {
+            get { return isVisiblePrice2; }
+            set { isVisiblePrice2 = value; OnPropertyChanged(); }
+        }
+
+        private bool isVisiblePrice3 = false;
+        public bool IsVisiblePrice3
+        {
+            get { return isVisiblePrice3; }
+            set { isVisiblePrice3 = value; OnPropertyChanged(); }
+        }
+
+        private bool isVisiblePrice4 = false;
+        public bool IsVisiblePrice4
+        {
+            get { return isVisiblePrice4; }
+            set { isVisiblePrice4 = value; OnPropertyChanged(); }
+        }
+
         private Restaurant restaurant;
         public Restaurant Restaurant
         {
@@ -70,6 +98,46 @@ namespace PTA_Restaurants.XForms.ViewModels
             ExecuteGetRestaurantDetailMenuCommand(restaurantDetail);
         }
 
+        private void setUpPrices()
+        {
+            IsBusy = true;
+
+            if (!string.IsNullOrEmpty(RestaurantDetail.Price1))
+            {
+                IsVisiblePrice1 = true;
+                for (int i = 0; i < RestaurantDetailMenuCollection.RestaurantDetailMenuList.Count; i++)
+                {
+                    RestaurantDetailMenuCollection.RestaurantDetailMenuList[i].IsVisiblePrice1 = true;
+                }
+            }
+            if (!string.IsNullOrEmpty(RestaurantDetail.Price2))
+            {
+                IsVisiblePrice2 = true;
+                for (int i = 0; i < RestaurantDetailMenuCollection.RestaurantDetailMenuList.Count; i++)
+                {
+                    RestaurantDetailMenuCollection.RestaurantDetailMenuList[i].IsVisiblePrice2 = true;
+                }
+            }
+            if (!string.IsNullOrEmpty(RestaurantDetail.Price3))
+            {
+                IsVisiblePrice3 = true;
+                for (int i = 0; i < RestaurantDetailMenuCollection.RestaurantDetailMenuList.Count; i++)
+                {
+                    RestaurantDetailMenuCollection.RestaurantDetailMenuList[i].IsVisiblePrice3 = true;
+                }
+            }
+            if (!string.IsNullOrEmpty(RestaurantDetail.Price4))
+            {
+                IsVisiblePrice4 = true;
+                for (int i = 0; i < RestaurantDetailMenuCollection.RestaurantDetailMenuList.Count; i++)
+                {
+                    RestaurantDetailMenuCollection.RestaurantDetailMenuList[i].IsVisiblePrice4 = true;
+                }
+            }
+
+            IsBusy = false;
+        }
+
         private Command getRestaurantDetailMenu;
 
         public Command GetRestaurantDetailMenuCommand
@@ -102,6 +170,7 @@ namespace PTA_Restaurants.XForms.ViewModels
             }
             finally
             {
+                setUpPrices();
                 IsBusy = false;
                 GetRestaurantDetailMenuCommand.ChangeCanExecute();
             }

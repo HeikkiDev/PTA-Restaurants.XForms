@@ -56,6 +56,11 @@ namespace PTA_Restaurants.XForms.Models
         public string Sulfites { get; set; }
         [XmlElement(ElementName = "vegetarian")]
         public string Vegetarian { get; set; }
+
+        public bool IsVisiblePrice1 {get; set;}
+        public bool IsVisiblePrice2 { get; set; }
+        public bool IsVisiblePrice3 { get; set; }
+        public bool IsVisiblePrice4 { get; set; }
     }
 
     [XmlRoot(ElementName = "collection")]

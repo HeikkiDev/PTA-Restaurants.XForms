@@ -41,7 +41,7 @@ namespace PTA_Restaurants.XForms.ViewModels
             }
         }
 
-        private DailyMenuList dailyMenuList;
+        /*private DailyMenuList dailyMenuList;
         public DailyMenuList DailyMenuList
         {
             get { return dailyMenuList; }
@@ -50,7 +50,7 @@ namespace PTA_Restaurants.XForms.ViewModels
                 dailyMenuList = value;
                 OnPropertyChanged();
             }
-        }
+        }*/
 
         private ObservableCollection<DailyMenuDetail> menuDetailList;
         public ObservableCollection<DailyMenuDetail> MenuDetailList
@@ -69,7 +69,7 @@ namespace PTA_Restaurants.XForms.ViewModels
             IsBusy = true;
             this.restaurant = restaurant;
             this.restaurantDetail = restaurantDetail;
-            this.dailyMenuList = dailyMenuList;
+            //this.dailyMenuList = dailyMenuList;
             this .MenuDetailList = setUpList(dailyMenuList);
             IsBusy = false;
         }
