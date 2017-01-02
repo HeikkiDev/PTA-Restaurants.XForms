@@ -43,19 +43,13 @@
     <Compile Include="Models\RestaurantDetail.cs" />
     <Compile Include="Models\RestaurantDetailMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DailyMenuTemplateSelector.cs" />
+    <Compile Include="DailyMenuTemplateSelector.cs" />
     <Compile Include="Services\RestaurantsServiceAPI.cs" />
     <Compile Include="ViewModels\RestaurantDetailDailyMenuViewModel.cs" />
     <Compile Include="ViewModels\RestaurantDetailMenuViewModel.cs" />
     <Compile Include="ViewModels\RestaurantDetailOffersViewModel.cs" />
     <Compile Include="ViewModels\RestaurantDetailViewModel.cs" />
     <Compile Include="ViewModels\RestautantsViewModel.cs" />
-    <Compile Include="Views\ListHeaderViewCell.xaml.cs">
-      <DependentUpon>ListHeaderViewCell.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListItemViewCell.xaml.cs">
-      <DependentUpon>ListItemViewCell.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\RestaurantDetailDailyMenuPage.xaml.cs">
       <DependentUpon>RestaurantDetailDailyMenuPage.xaml</DependentUpon>
     </Compile>
@@ -124,18 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\RestaurantDetailDailyMenuPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\ListHeaderViewCell.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\ListItemViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
