@@ -25,7 +25,8 @@ namespace PTA_Restaurants.XForms
             MainPage = new NavigationPage(restaurantsPage)
             {
                 BarBackgroundColor = Color.FromHex("3498db"),
-                BarTextColor = Color.White
+                BarTextColor = Color.White//,
+                //BackgroundColor = Color.FromHex("424242")
             };
         }
 

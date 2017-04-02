@@ -7,306 +7,201 @@ using System.Xml.Serialization;
 
 namespace PTA_Restaurants.XForms.Models
 {
-    [XmlRoot(ElementName = "restaurantMenuDataV24Bean")]
-    public class RestaurantDetailCollection
+    public class FirstCours
     {
-        // Lista a la que se hace Binding de las categorías de productos
-        [XmlElement(ElementName = "categoryList")]
-        public List<RestaurantDetail> RestaurantDetailList { get; set; }
-        
-        //Lista a la que se hace Binding con el Menú Diario
-        [XmlElement(ElementName = "dailyMenuList")]
-        public DailyMenuList DailyMenuList { get; set; }
-
-        //Lista a la que se hace Binding con las ofertas
-        [XmlElement(ElementName = "offerList")]
-        public List<OfferList> OfferList { get; set; }
+        public int idProduct { get; set; }
+        public int idProductType { get; set; }
+        public object courseType { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public object price1 { get; set; }
+        public object price2 { get; set; }
+        public object price3 { get; set; }
+        public object price4 { get; set; }
+        public bool vegetarian { get; set; }
+        public object healthy { get; set; }
+        public object celiac { get; set; }
+        public bool hasNotAlergens { get; set; }
+        public bool gluten { get; set; }
+        public bool crustaceans { get; set; }
+        public bool eggs { get; set; }
+        public bool fish { get; set; }
+        public bool peanuts { get; set; }
+        public bool soy { get; set; }
+        public bool milky { get; set; }
+        public bool driedFruits { get; set; }
+        public bool celery { get; set; }
+        public bool mustard { get; set; }
+        public bool sesame { get; set; }
+        public bool sulfites { get; set; }
+        public bool lupin { get; set; }
+        public bool molluscs { get; set; }
     }
 
-    [XmlRoot(ElementName = "categoryList")]
-    public class RestaurantDetail
+    public class SecondCours
     {
-        [XmlElement(ElementName = "idMenuCategory")]
-        public string IdMenuCategory { get; set; }
-        [XmlElement(ElementName = "name")]
-        public string Name { get; set; }
-        [XmlElement(ElementName = "price1")]
-        public string Price1 { get; set; }
-        [XmlElement(ElementName = "price2")]
-        public string Price2 { get; set; }
-        [XmlElement(ElementName = "price3")]
-        public string Price3 { get; set; }
-        [XmlElement(ElementName = "price4")]
-        public string Price4 { get; set; }
+        public int idProduct { get; set; }
+        public int idProductType { get; set; }
+        public object courseType { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public object price1 { get; set; }
+        public object price2 { get; set; }
+        public object price3 { get; set; }
+        public object price4 { get; set; }
+        public bool vegetarian { get; set; }
+        public object healthy { get; set; }
+        public object celiac { get; set; }
+        public bool hasNotAlergens { get; set; }
+        public bool gluten { get; set; }
+        public bool crustaceans { get; set; }
+        public bool eggs { get; set; }
+        public bool fish { get; set; }
+        public bool peanuts { get; set; }
+        public bool soy { get; set; }
+        public bool milky { get; set; }
+        public bool driedFruits { get; set; }
+        public bool celery { get; set; }
+        public bool mustard { get; set; }
+        public bool sesame { get; set; }
+        public bool sulfites { get; set; }
+        public bool lupin { get; set; }
+        public bool molluscs { get; set; }
     }
 
-    [XmlRoot(ElementName = "desserts")]
-    public class Desserts
+    public class Garnish
     {
-        [XmlElement(ElementName = "celery")]
-        public string Celery { get; set; }
-        [XmlElement(ElementName = "crustaceans")]
-        public string Crustaceans { get; set; }
-        [XmlElement(ElementName = "description")]
-        public string Description { get; set; }
-        [XmlElement(ElementName = "driedFruits")]
-        public string DriedFruits { get; set; }
-        [XmlElement(ElementName = "eggs")]
-        public string Eggs { get; set; }
-        [XmlElement(ElementName = "fish")]
-        public string Fish { get; set; }
-        [XmlElement(ElementName = "gluten")]
-        public string Gluten { get; set; }
-        [XmlElement(ElementName = "hasNotAlergens")]
-        public string HasNotAlergens { get; set; }
-        [XmlElement(ElementName = "idProduct")]
-        public string IdProduct { get; set; }
-        [XmlElement(ElementName = "idProductType")]
-        public string IdProductType { get; set; }
-        [XmlElement(ElementName = "lupin")]
-        public string Lupin { get; set; }
-        [XmlElement(ElementName = "milky")]
-        public string Milky { get; set; }
-        [XmlElement(ElementName = "molluscs")]
-        public string Molluscs { get; set; }
-        [XmlElement(ElementName = "mustard")]
-        public string Mustard { get; set; }
-        [XmlElement(ElementName = "name")]
-        public string Name { get; set; }
-        [XmlElement(ElementName = "peanuts")]
-        public string Peanuts { get; set; }
-        [XmlElement(ElementName = "sesame")]
-        public string Sesame { get; set; }
-        [XmlElement(ElementName = "soy")]
-        public string Soy { get; set; }
-        [XmlElement(ElementName = "sulfites")]
-        public string Sulfites { get; set; }
-        [XmlElement(ElementName = "vegetarian")]
-        public string Vegetarian { get; set; }
+        public int idProduct { get; set; }
+        public int idProductType { get; set; }
+        public object courseType { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public object price1 { get; set; }
+        public object price2 { get; set; }
+        public object price3 { get; set; }
+        public object price4 { get; set; }
+        public bool vegetarian { get; set; }
+        public object healthy { get; set; }
+        public object celiac { get; set; }
+        public bool hasNotAlergens { get; set; }
+        public bool gluten { get; set; }
+        public bool crustaceans { get; set; }
+        public bool eggs { get; set; }
+        public bool fish { get; set; }
+        public bool peanuts { get; set; }
+        public bool soy { get; set; }
+        public bool milky { get; set; }
+        public bool driedFruits { get; set; }
+        public bool celery { get; set; }
+        public bool mustard { get; set; }
+        public bool sesame { get; set; }
+        public bool sulfites { get; set; }
+        public bool lupin { get; set; }
+        public bool molluscs { get; set; }
     }
 
-    [XmlRoot(ElementName = "drinks")]
-    public class Drinks
+    public class Dessert
     {
-        [XmlElement(ElementName = "celery")]
-        public string Celery { get; set; }
-        [XmlElement(ElementName = "crustaceans")]
-        public string Crustaceans { get; set; }
-        [XmlElement(ElementName = "description")]
-        public string Description { get; set; }
-        [XmlElement(ElementName = "driedFruits")]
-        public string DriedFruits { get; set; }
-        [XmlElement(ElementName = "eggs")]
-        public string Eggs { get; set; }
-        [XmlElement(ElementName = "fish")]
-        public string Fish { get; set; }
-        [XmlElement(ElementName = "gluten")]
-        public string Gluten { get; set; }
-        [XmlElement(ElementName = "hasNotAlergens")]
-        public string HasNotAlergens { get; set; }
-        [XmlElement(ElementName = "idProduct")]
-        public string IdProduct { get; set; }
-        [XmlElement(ElementName = "idProductType")]
-        public string IdProductType { get; set; }
-        [XmlElement(ElementName = "lupin")]
-        public string Lupin { get; set; }
-        [XmlElement(ElementName = "milky")]
-        public string Milky { get; set; }
-        [XmlElement(ElementName = "molluscs")]
-        public string Molluscs { get; set; }
-        [XmlElement(ElementName = "mustard")]
-        public string Mustard { get; set; }
-        [XmlElement(ElementName = "name")]
-        public string Name { get; set; }
-        [XmlElement(ElementName = "peanuts")]
-        public string Peanuts { get; set; }
-        [XmlElement(ElementName = "price1")]
-        public string Price1 { get; set; }
-        [XmlElement(ElementName = "sesame")]
-        public string Sesame { get; set; }
-        [XmlElement(ElementName = "soy")]
-        public string Soy { get; set; }
-        [XmlElement(ElementName = "sulfites")]
-        public string Sulfites { get; set; }
-        [XmlElement(ElementName = "vegetarian")]
-        public string Vegetarian { get; set; }
-        [XmlElement(ElementName = "price2")]
-        public string Price2 { get; set; }
+        public int idProduct { get; set; }
+        public int idProductType { get; set; }
+        public object courseType { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public object price1 { get; set; }
+        public object price2 { get; set; }
+        public object price3 { get; set; }
+        public object price4 { get; set; }
+        public bool vegetarian { get; set; }
+        public object healthy { get; set; }
+        public object celiac { get; set; }
+        public bool hasNotAlergens { get; set; }
+        public bool gluten { get; set; }
+        public bool crustaceans { get; set; }
+        public bool eggs { get; set; }
+        public bool fish { get; set; }
+        public bool peanuts { get; set; }
+        public bool soy { get; set; }
+        public bool milky { get; set; }
+        public bool driedFruits { get; set; }
+        public bool celery { get; set; }
+        public bool mustard { get; set; }
+        public bool sesame { get; set; }
+        public bool sulfites { get; set; }
+        public bool lupin { get; set; }
+        public bool molluscs { get; set; }
     }
 
-    [XmlRoot(ElementName = "firstCourses")]
-    public class FirstCourses
+    public class Drink
     {
-        [XmlElement(ElementName = "celery")]
-        public string Celery { get; set; }
-        [XmlElement(ElementName = "crustaceans")]
-        public string Crustaceans { get; set; }
-        [XmlElement(ElementName = "description")]
-        public string Description { get; set; }
-        [XmlElement(ElementName = "driedFruits")]
-        public string DriedFruits { get; set; }
-        [XmlElement(ElementName = "eggs")]
-        public string Eggs { get; set; }
-        [XmlElement(ElementName = "fish")]
-        public string Fish { get; set; }
-        [XmlElement(ElementName = "gluten")]
-        public string Gluten { get; set; }
-        [XmlElement(ElementName = "hasNotAlergens")]
-        public string HasNotAlergens { get; set; }
-        [XmlElement(ElementName = "idProduct")]
-        public string IdProduct { get; set; }
-        [XmlElement(ElementName = "idProductType")]
-        public string IdProductType { get; set; }
-        [XmlElement(ElementName = "lupin")]
-        public string Lupin { get; set; }
-        [XmlElement(ElementName = "milky")]
-        public string Milky { get; set; }
-        [XmlElement(ElementName = "molluscs")]
-        public string Molluscs { get; set; }
-        [XmlElement(ElementName = "mustard")]
-        public string Mustard { get; set; }
-        [XmlElement(ElementName = "name")]
-        public string Name { get; set; }
-        [XmlElement(ElementName = "peanuts")]
-        public string Peanuts { get; set; }
-        [XmlElement(ElementName = "price1")]
-        public string Price1 { get; set; }
-        [XmlElement(ElementName = "sesame")]
-        public string Sesame { get; set; }
-        [XmlElement(ElementName = "soy")]
-        public string Soy { get; set; }
-        [XmlElement(ElementName = "sulfites")]
-        public string Sulfites { get; set; }
-        [XmlElement(ElementName = "vegetarian")]
-        public string Vegetarian { get; set; }
+        public int idProduct { get; set; }
+        public int idProductType { get; set; }
+        public object courseType { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public double? price1 { get; set; }
+        public double? price2 { get; set; }
+        public object price3 { get; set; }
+        public object price4 { get; set; }
+        public bool vegetarian { get; set; }
+        public object healthy { get; set; }
+        public object celiac { get; set; }
+        public bool hasNotAlergens { get; set; }
+        public bool gluten { get; set; }
+        public bool crustaceans { get; set; }
+        public bool eggs { get; set; }
+        public bool fish { get; set; }
+        public bool peanuts { get; set; }
+        public bool soy { get; set; }
+        public bool milky { get; set; }
+        public bool driedFruits { get; set; }
+        public bool celery { get; set; }
+        public bool mustard { get; set; }
+        public bool sesame { get; set; }
+        public bool sulfites { get; set; }
+        public bool lupin { get; set; }
+        public bool molluscs { get; set; }
     }
 
-    [XmlRoot(ElementName = "garnishes")]
-    public class Garnishes
-    {
-        [XmlElement(ElementName = "celery")]
-        public string Celery { get; set; }
-        [XmlElement(ElementName = "crustaceans")]
-        public string Crustaceans { get; set; }
-        [XmlElement(ElementName = "description")]
-        public string Description { get; set; }
-        [XmlElement(ElementName = "driedFruits")]
-        public string DriedFruits { get; set; }
-        [XmlElement(ElementName = "eggs")]
-        public string Eggs { get; set; }
-        [XmlElement(ElementName = "fish")]
-        public string Fish { get; set; }
-        [XmlElement(ElementName = "gluten")]
-        public string Gluten { get; set; }
-        [XmlElement(ElementName = "hasNotAlergens")]
-        public string HasNotAlergens { get; set; }
-        [XmlElement(ElementName = "idProduct")]
-        public string IdProduct { get; set; }
-        [XmlElement(ElementName = "idProductType")]
-        public string IdProductType { get; set; }
-        [XmlElement(ElementName = "lupin")]
-        public string Lupin { get; set; }
-        [XmlElement(ElementName = "milky")]
-        public string Milky { get; set; }
-        [XmlElement(ElementName = "molluscs")]
-        public string Molluscs { get; set; }
-        [XmlElement(ElementName = "mustard")]
-        public string Mustard { get; set; }
-        [XmlElement(ElementName = "name")]
-        public string Name { get; set; }
-        [XmlElement(ElementName = "peanuts")]
-        public string Peanuts { get; set; }
-        [XmlElement(ElementName = "sesame")]
-        public string Sesame { get; set; }
-        [XmlElement(ElementName = "soy")]
-        public string Soy { get; set; }
-        [XmlElement(ElementName = "sulfites")]
-        public string Sulfites { get; set; }
-        [XmlElement(ElementName = "vegetarian")]
-        public string Vegetarian { get; set; }
-    }
-
-    [XmlRoot(ElementName = "secondCourses")]
-    public class SecondCourses
-    {
-        [XmlElement(ElementName = "celery")]
-        public string Celery { get; set; }
-        [XmlElement(ElementName = "crustaceans")]
-        public string Crustaceans { get; set; }
-        [XmlElement(ElementName = "description")]
-        public string Description { get; set; }
-        [XmlElement(ElementName = "driedFruits")]
-        public string DriedFruits { get; set; }
-        [XmlElement(ElementName = "eggs")]
-        public string Eggs { get; set; }
-        [XmlElement(ElementName = "fish")]
-        public string Fish { get; set; }
-        [XmlElement(ElementName = "gluten")]
-        public string Gluten { get; set; }
-        [XmlElement(ElementName = "hasNotAlergens")]
-        public string HasNotAlergens { get; set; }
-        [XmlElement(ElementName = "idProduct")]
-        public string IdProduct { get; set; }
-        [XmlElement(ElementName = "idProductType")]
-        public string IdProductType { get; set; }
-        [XmlElement(ElementName = "lupin")]
-        public string Lupin { get; set; }
-        [XmlElement(ElementName = "milky")]
-        public string Milky { get; set; }
-        [XmlElement(ElementName = "molluscs")]
-        public string Molluscs { get; set; }
-        [XmlElement(ElementName = "mustard")]
-        public string Mustard { get; set; }
-        [XmlElement(ElementName = "name")]
-        public string Name { get; set; }
-        [XmlElement(ElementName = "peanuts")]
-        public string Peanuts { get; set; }
-        [XmlElement(ElementName = "price1")]
-        public string Price1 { get; set; }
-        [XmlElement(ElementName = "sesame")]
-        public string Sesame { get; set; }
-        [XmlElement(ElementName = "soy")]
-        public string Soy { get; set; }
-        [XmlElement(ElementName = "sulfites")]
-        public string Sulfites { get; set; }
-        [XmlElement(ElementName = "vegetarian")]
-        public string Vegetarian { get; set; }
-    }
-
-    [XmlRoot(ElementName = "dailyMenuList")]
-    public class DailyMenuList
-    {
-        [XmlElement(ElementName = "buffet")]
-        public string Buffet { get; set; }
-        [XmlElement(ElementName = "date")]
-        public string Date { get; set; }
-        [XmlElement(ElementName = "description")]
-        public string Description { get; set; }
-        [XmlElement(ElementName = "desserts")]
-        public List<Desserts> Desserts { get; set; }
-        [XmlElement(ElementName = "drinks")]
-        public List<Drinks> Drinks { get; set; }
-        [XmlElement(ElementName = "firstCourses")]
-        public List<FirstCourses> FirstCourses { get; set; }
-        [XmlElement(ElementName = "garnishes")]
-        public List<Garnishes> Garnishes { get; set; }
-        [XmlElement(ElementName = "halfPrice")]
-        public string HalfPrice { get; set; }
-        [XmlElement(ElementName = "idDailyMenu")]
-        public string IdDailyMenu { get; set; }
-        [XmlElement(ElementName = "price")]
-        public string Price { get; set; }
-        [XmlElement(ElementName = "secondCourses")]
-        public List<SecondCourses> SecondCourses { get; set; }
-    }
-
-    [XmlRoot(ElementName = "offerList")]
     public class OfferList
     {
-        [XmlElement(ElementName = "description")]
-        public string Description { get; set; }
-        [XmlElement(ElementName = "name")]
-        public string Name { get; set; }
+        public object idOffer { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
     }
-    
+
+    public class DailyMenuList
+    {
+        public int idDailyMenu { get; set; }
+        public string date { get; set; }
+        public bool buffet { get; set; }
+        public string description { get; set; }
+        public double price { get; set; }
+        public double halfPrice { get; set; }
+        public List<FirstCours> firstCourses { get; set; }
+        public List<SecondCours> secondCourses { get; set; }
+        public List<Garnish> garnishes { get; set; }
+        public List<Dessert> desserts { get; set; }
+        public List<Drink> drinks { get; set; }
+    }
+
+    public class RestaurantDetail
+    {
+        public int idMenuCategory { get; set; }
+        public string name { get; set; }
+        public object description { get; set; }
+        public string price1 { get; set; }
+        public string price2 { get; set; }
+        public string price3 { get; set; }
+        public string price4 { get; set; }
+    }
+
+    public class RestaurantDetailCollection
+    {
+        public List<DailyMenuList> DailyMenuList { get; set; }
+        public List<RestaurantDetail> RestaurantDetailList { get; set; }
+        public List<RestaurantDetail> categoryList { get; set; }
+        public List<OfferList> OfferList { get; set; }
+        public object eventList { get; set; }
+    }
+
 }

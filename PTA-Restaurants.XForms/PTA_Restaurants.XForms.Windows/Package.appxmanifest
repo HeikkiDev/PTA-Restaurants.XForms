@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="61146DD272334.PTARestaurantes" Publisher="CN=7CC15E6C-5DF0-47FF-86B1-90D55D4AB4F4" Version="1.1.0.1" />
+  <Identity Name="61146DD272334.PTARestaurantes" Publisher="CN=7CC15E6C-5DF0-47FF-86B1-90D55D4AB4F4" Version="1.1.0.3" />
   <Properties>
     <DisplayName>PTA Restaurantes</DisplayName>
     <PublisherDisplayName>Heikki Dev.</PublisherDisplayName>

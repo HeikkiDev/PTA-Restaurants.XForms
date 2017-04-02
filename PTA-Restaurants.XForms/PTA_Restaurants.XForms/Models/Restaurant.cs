@@ -8,43 +8,30 @@ using System.Xml.Serialization;
 
 namespace PTA_Restaurants.XForms.Models
 {
-
-    [XmlRoot(ElementName = "restaurantSummaryV24")]
     public class Restaurant
     {
-        [XmlElement(ElementName = "address")]
-        public string Address { get; set; }
-        [XmlElement(ElementName = "idRestaurant")]
-        public string IdRestaurant { get; set; }
-        [XmlElement(ElementName = "logo")]
-        public string Logo { get; set; }
-        [XmlElement(ElementName = "name")]
-        public string Name { get; set; }
-        [XmlElement(ElementName = "phone")]
-        public string Phone { get; set; }
-        [XmlElement(ElementName = "buffet")]
-        public string Buffet { get; set; }
-        [XmlElement(ElementName = "date")]
-        public string Date { get; set; }
-        [XmlElement(ElementName = "halfPrice")]
-        public string HalfPrice { get; set; }
-        [XmlElement(ElementName = "idDailyMenu")]
-        public string IdDailyMenu { get; set; }
-        [XmlElement(ElementName = "price")]
-        public string Price { get; set; }
+        public int idRestaurant { get; set; }
+        public object idDailyMenu { get; set; }
+        public string name { get; set; }
+        public string address { get; set; }
+        public string phone { get; set; }
+        public string logo { get; set; }
+        public object buffet { get; set; }
+        public object price { get; set; }
+        public object halfPrice { get; set; }
+        public object date { get; set; }
 
         // Propiedad para leer la URL completa de la imagen de cada Restaurante
         private string logoURL = "http://nrestaurante-neuronable.rhcloud.com/images/logos/";
         public string LogoURL
         {
-            get { return logoURL + Logo; }
+            get { return logoURL + logo; }
         }
     }
 
-    [XmlRoot(ElementName = "collection")]
     public class RestaurantsCollection
     {
-        [XmlElement(ElementName = "restaurantSummaryV24")]
         public List<Restaurant> RestaurantsList { get; set; }
     }
+
 }

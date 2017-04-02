@@ -32,7 +32,7 @@ namespace PTA_Restaurants.XForms.Views
             RestaurantDetail restaurantDetail = (RestaurantDetail)e.SelectedItem;
             Restaurant restaurant = ((RestaurantDetailViewModel)ListViewRestaurantDetail.BindingContext).Restaurant;
 
-            switch (restaurantDetail.Name)
+            switch (restaurantDetail.name)
             {
                 case "Ofertas":
                     var restaurantDetailOffers = new RestaurantDetailOffersPage
@@ -44,10 +44,16 @@ namespace PTA_Restaurants.XForms.Views
                     break;
 
                 case "Menú del día":
+                    DailyMenuList dailyMenuList = null;
+                    foreach (var item in ((RestaurantDetailViewModel)ListViewRestaurantDetail.BindingContext).RestaurantDetailCollection.DailyMenuList)
+                    {
+                        dailyMenuList = item;
+                        break;
+                    }
                     var restaurantDailyMenu = new RestaurantDetailDailyMenuPage
                     {
                         Title = "PTA Restaurantes",
-                        BindingContext = new RestaurantDetailDailyMenuViewModel(restaurant, restaurantDetail, ((RestaurantDetailViewModel)ListViewRestaurantDetail.BindingContext).RestaurantDetailCollection.DailyMenuList)
+                        BindingContext = new RestaurantDetailDailyMenuViewModel(restaurant, restaurantDetail, dailyMenuList)
                     };
                     await Navigation.PushAsync(restaurantDailyMenu, true);
                     break;

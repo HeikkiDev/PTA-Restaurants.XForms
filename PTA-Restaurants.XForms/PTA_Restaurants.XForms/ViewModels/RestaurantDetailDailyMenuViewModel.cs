@@ -81,7 +81,7 @@ namespace PTA_Restaurants.XForms.ViewModels
             ObservableCollection<DailyMenuDetail>  menuDetailList = new ObservableCollection<DailyMenuDetail>();
 
             // Añadimos los primeros
-            if (dailyMenuList.FirstCourses != null && dailyMenuList.FirstCourses.Count > 0)
+            if (dailyMenuList.firstCourses != null && dailyMenuList.firstCourses.Count > 0)
             {
                 dailyMenuItem = new DailyMenuDetail
                 {
@@ -90,20 +90,20 @@ namespace PTA_Restaurants.XForms.ViewModels
                 };
                 menuDetailList.Add(dailyMenuItem);
 
-                foreach (var item in dailyMenuList.FirstCourses)
+                foreach (var item in dailyMenuList.firstCourses)
                 {
                     dailyMenuItem = new DailyMenuDetail
                     {
                         isHeader = false,
-                        Name = item.Name,
-                        Description = item.Description
+                        Name = item.name,
+                        Description = item.description
                     };
                     menuDetailList.Add(dailyMenuItem);
                 }
             }
 
             // Añadimos los segundos
-            if (dailyMenuList.SecondCourses != null && dailyMenuList.SecondCourses.Count > 0)
+            if (dailyMenuList.secondCourses != null && dailyMenuList.secondCourses.Count > 0)
             {
                 dailyMenuItem = new DailyMenuDetail
                 {
@@ -112,20 +112,20 @@ namespace PTA_Restaurants.XForms.ViewModels
                 };
                 menuDetailList.Add(dailyMenuItem);
 
-                foreach (var item in dailyMenuList.SecondCourses)
+                foreach (var item in dailyMenuList.secondCourses)
                 {
                     dailyMenuItem = new DailyMenuDetail
                     {
                         isHeader = false,
-                        Name = item.Name,
-                        Description = item.Description
+                        Name = item.name,
+                        Description = item.description
                     };
                     menuDetailList.Add(dailyMenuItem);
                 }
             }
 
             // Añadimos las guarniciones
-            if (dailyMenuList.Garnishes != null && dailyMenuList.Garnishes.Count > 0)
+            if (dailyMenuList.garnishes != null && dailyMenuList.garnishes.Count > 0)
             {
                 dailyMenuItem = new DailyMenuDetail
                 {
@@ -134,20 +134,20 @@ namespace PTA_Restaurants.XForms.ViewModels
                 };
                 menuDetailList.Add(dailyMenuItem);
 
-                foreach (var item in dailyMenuList.Garnishes)
+                foreach (var item in dailyMenuList.garnishes)
                 {
                     dailyMenuItem = new DailyMenuDetail
                     {
                         isHeader = false,
-                        Name = item.Name,
-                        Description = item.Description
+                        Name = item.name,
+                        Description = item.description
                     };
                     menuDetailList.Add(dailyMenuItem);
                 }
             }
 
             // Añadimos los postres
-            if (dailyMenuList.Desserts != null && dailyMenuList.Desserts.Count > 0)
+            if (dailyMenuList.desserts != null && dailyMenuList.desserts.Count > 0)
             {
                 dailyMenuItem = new DailyMenuDetail
                 {
@@ -156,20 +156,20 @@ namespace PTA_Restaurants.XForms.ViewModels
                 };
                 menuDetailList.Add(dailyMenuItem);
 
-                foreach (var item in dailyMenuList.Desserts)
+                foreach (var item in dailyMenuList.desserts)
                 {
                     dailyMenuItem = new DailyMenuDetail
                     {
                         isHeader = false,
-                        Name = item.Name,
-                        Description = item.Description
+                        Name = item.name,
+                        Description = item.description
                     };
                     menuDetailList.Add(dailyMenuItem);
                 }
             }
 
             // Añadimos las bebidas
-            if (dailyMenuList.Drinks != null && dailyMenuList.Drinks.Count > 0)
+            if (dailyMenuList.drinks != null && dailyMenuList.drinks.Count > 0)
             {
                 dailyMenuItem = new DailyMenuDetail
                 {
@@ -178,13 +178,13 @@ namespace PTA_Restaurants.XForms.ViewModels
                 };
                 menuDetailList.Add(dailyMenuItem);
 
-                foreach (var item in dailyMenuList.Drinks)
+                foreach (var item in dailyMenuList.drinks)
                 {
                     dailyMenuItem = new DailyMenuDetail
                     {
                         isHeader = false,
-                        Name = item.Name,
-                        Description = item.Description
+                        Name = item.name,
+                        Description = item.description
                     };
                     menuDetailList.Add(dailyMenuItem);
                 }

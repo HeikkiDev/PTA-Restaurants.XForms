@@ -102,7 +102,7 @@ namespace PTA_Restaurants.XForms.ViewModels
         {
             IsBusy = true;
 
-            if (!string.IsNullOrEmpty(RestaurantDetail.Price1))
+            if (!string.IsNullOrEmpty(RestaurantDetail.price1))
             {
                 IsVisiblePrice1 = true;
                 for (int i = 0; i < RestaurantDetailMenuCollection.RestaurantDetailMenuList.Count; i++)
@@ -110,7 +110,7 @@ namespace PTA_Restaurants.XForms.ViewModels
                     RestaurantDetailMenuCollection.RestaurantDetailMenuList[i].IsVisiblePrice1 = true;
                 }
             }
-            if (!string.IsNullOrEmpty(RestaurantDetail.Price2))
+            if (!string.IsNullOrEmpty(RestaurantDetail.price2))
             {
                 IsVisiblePrice2 = true;
                 for (int i = 0; i < RestaurantDetailMenuCollection.RestaurantDetailMenuList.Count; i++)
@@ -118,7 +118,7 @@ namespace PTA_Restaurants.XForms.ViewModels
                     RestaurantDetailMenuCollection.RestaurantDetailMenuList[i].IsVisiblePrice2 = true;
                 }
             }
-            if (!string.IsNullOrEmpty(RestaurantDetail.Price3))
+            if (!string.IsNullOrEmpty(RestaurantDetail.price3))
             {
                 IsVisiblePrice3 = true;
                 for (int i = 0; i < RestaurantDetailMenuCollection.RestaurantDetailMenuList.Count; i++)
@@ -126,7 +126,7 @@ namespace PTA_Restaurants.XForms.ViewModels
                     RestaurantDetailMenuCollection.RestaurantDetailMenuList[i].IsVisiblePrice3 = true;
                 }
             }
-            if (!string.IsNullOrEmpty(RestaurantDetail.Price4))
+            if (!string.IsNullOrEmpty(RestaurantDetail.price4))
             {
                 IsVisiblePrice4 = true;
                 for (int i = 0; i < RestaurantDetailMenuCollection.RestaurantDetailMenuList.Count; i++)

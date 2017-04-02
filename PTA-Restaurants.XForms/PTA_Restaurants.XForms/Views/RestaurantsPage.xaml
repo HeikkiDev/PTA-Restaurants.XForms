@@ -30,13 +30,15 @@
                    VerticalOptions="Center"
                    Source="{Binding LogoURL}"/>
             <StackLayout Padding="10" Spacing="5">
-              <Label Text="{Binding Name}"
+              <Label Text="{Binding name}"
                      TextColor="#3498db"
                      FontSize="22"
                      Style="{DynamicResource ListItemTextStyle}"/>
-              <Label Text="{Binding Address}"
+              <Label Text="{Binding address}"
+                     TextColor="White"
                      Style="{DynamicResource ListItemDetailTextStyle}"/>
-              <Label Text="{Binding Phone}"
+              <Label Text="{Binding phone}"
+                     TextColor="White"
                      Style="{DynamicResource ListItemDetailTextStyle}"/>
             </StackLayout>
           </StackLayout>

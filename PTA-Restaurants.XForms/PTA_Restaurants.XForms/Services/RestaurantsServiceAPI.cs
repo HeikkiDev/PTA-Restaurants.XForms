@@ -7,6 +7,7 @@ using PTA_Restaurants.XForms.Models;
 using System.Net.Http;
 using System.Xml.Serialization;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace PTA_Restaurants.XForms.Services
 {
@@ -27,21 +28,17 @@ namespace PTA_Restaurants.XForms.Services
             using (var client = new HttpClient())
             {
                 var url = string.Format(RestaurantsListURLBase, today.Year, today.Month, today.Day);
-                var xml = await client.GetStringAsync(url);
-                xml = xml.Substring(55);
+                var json = await client.GetStringAsync(url);
 
-                if (string.IsNullOrWhiteSpace(xml))
+                if (string.IsNullOrWhiteSpace(json))
                     return null;
 
-                RestaurantsCollection restaurantsList = null;
-                XmlSerializer serializer = new XmlSerializer(typeof(RestaurantsCollection));
+                RestaurantsCollection restaurantsList = new RestaurantsCollection();
 
                 try
                 {
-                    using (TextReader reader = new StringReader(xml))
-                    {
-                        restaurantsList = (RestaurantsCollection)serializer.Deserialize(reader);
-                    }
+                    List<Restaurant> rList  = JsonConvert.DeserializeObject<List<Restaurant>>(json);
+                    restaurantsList.RestaurantsList = rList;
                 }
                 catch
                 {
@@ -62,22 +59,17 @@ namespace PTA_Restaurants.XForms.Services
         {
             using (var client = new HttpClient())
             {
-                var url = string.Format(RestaurantDetailURLBase, restaurant.IdRestaurant, today.Year, today.Month, today.Day);
-                var xml = await client.GetStringAsync(url);
-                xml = xml.Substring(55);
+                var url = string.Format(RestaurantDetailURLBase, restaurant.idRestaurant, today.Year, today.Month, today.Day);
+                var json = await client.GetStringAsync(url);
 
-                if (string.IsNullOrWhiteSpace(xml))
+                if (string.IsNullOrWhiteSpace(json))
                     return null;
 
                 RestaurantDetailCollection restaurantDetailList = null;
-                XmlSerializer serializer = new XmlSerializer(typeof(RestaurantDetailCollection));
 
                 try
                 {
-                    using (TextReader reader = new StringReader(xml))
-                    {
-                        restaurantDetailList = (RestaurantDetailCollection)serializer.Deserialize(reader);
-                    }
+                    restaurantDetailList =  JsonConvert.DeserializeObject<RestaurantDetailCollection>(json);
                 }
                 catch
                 {
@@ -98,22 +90,17 @@ namespace PTA_Restaurants.XForms.Services
         {
             using (var client = new HttpClient())
             {
-                var url = string.Format(RestaurantDetailMenuURLBase, restaurantDetail.IdMenuCategory);
-                var xml = await client.GetStringAsync(url);
-                xml = xml.Substring(55);
+                var url = string.Format(RestaurantDetailMenuURLBase, restaurantDetail.idMenuCategory);
+                var json = await client.GetStringAsync(url);
 
-                if (string.IsNullOrWhiteSpace(xml))
+                if (string.IsNullOrWhiteSpace(json))
                     return null;
 
-                RestaurantDetailMenuCollection restaurantDetailList = null;
-                XmlSerializer serializer = new XmlSerializer(typeof(RestaurantDetailMenuCollection));
+                RestaurantDetailMenuCollection restaurantDetailList = new RestaurantDetailMenuCollection();
 
                 try
                 {
-                    using (TextReader reader = new StringReader(xml))
-                    {
-                        restaurantDetailList = (RestaurantDetailMenuCollection)serializer.Deserialize(reader);
-                    }
+                    restaurantDetailList.RestaurantDetailMenuList = JsonConvert.DeserializeObject<List<RestaurantDetailMenu>>(json);
                 }
                 catch
                 {

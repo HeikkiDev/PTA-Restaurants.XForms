@@ -88,13 +88,19 @@ namespace PTA_Restaurants.XForms.ViewModels
                 else
                     IsVisible = false;
 
+                if (RestaurantDetailCollection.RestaurantDetailList == null)
+                    RestaurantDetailCollection.RestaurantDetailList = new List<RestaurantDetail>();
+
+                if(RestaurantDetailCollection.categoryList != null)
+                    RestaurantDetailCollection.RestaurantDetailList.AddRange(RestaurantDetailCollection.categoryList);
+
                 if (RestaurantDetailCollection.DailyMenuList != null)
-                    RestaurantDetailCollection.RestaurantDetailList.Insert(0, new RestaurantDetail { Name = "Menú del día" });
+                    RestaurantDetailCollection.RestaurantDetailList.Insert(0, new RestaurantDetail { name = "Menú del día" });
 
                 if (RestaurantDetailCollection.OfferList != null && RestaurantDetailCollection.OfferList.Count != 0)
-                    RestaurantDetailCollection.RestaurantDetailList.Insert(0, new RestaurantDetail { Name = "Ofertas" });
+                    RestaurantDetailCollection.RestaurantDetailList.Insert(0, new RestaurantDetail { name = "Ofertas" });
             }
-            catch
+            catch (Exception ex)
             {
                 IsVisible = true;
                 RestaurantDetailCollection = null;

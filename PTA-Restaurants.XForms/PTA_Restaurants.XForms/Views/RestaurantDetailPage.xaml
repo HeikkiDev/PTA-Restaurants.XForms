@@ -12,13 +12,15 @@
              VerticalOptions="Center"
              Source="{Binding Restaurant.LogoURL}"/>
       <StackLayout Padding="10" Spacing="5">
-        <Label Text="{Binding Restaurant.Name}"
+        <Label Text="{Binding Restaurant.name}"
                TextColor="#3498db"
                FontSize="22"
                Style="{DynamicResource ListItemTextStyle}"/>
-        <Label Text="{Binding Restaurant.Address}"
+        <Label Text="{Binding Restaurant.address}"
+               TextColor="White"
                Style="{DynamicResource ListItemDetailTextStyle}"/>
-        <Label Text="{Binding Restaurant.Phone}"
+        <Label Text="{Binding Restaurant.phone}"
+               TextColor="White"
                Style="{DynamicResource ListItemDetailTextStyle}"/>
       </StackLayout>
     </StackLayout>
@@ -49,7 +51,7 @@
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-            <Label Text="{Binding Name}"
+            <Label Text="{Binding name}"
                        TextColor="#3498db"
                        FontSize="22"
                        Style="{DynamicResource ListItemTextStyle}"/>

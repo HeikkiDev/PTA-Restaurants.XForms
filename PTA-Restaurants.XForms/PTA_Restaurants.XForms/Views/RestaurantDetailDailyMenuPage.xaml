@@ -48,29 +48,31 @@
              VerticalOptions="Center"
              Source="{Binding Restaurant.LogoURL}"/>
       <StackLayout Padding="10" Spacing="5">
-        <Label Text="{Binding Restaurant.Name}"
+        <Label Text="{Binding Restaurant.name}"
                TextColor="#3498db"
                FontSize="22"
                Style="{DynamicResource ListItemTextStyle}"/>
-        <Label Text="{Binding Restaurant.Address}"
+        <Label Text="{Binding Restaurant.address}"
+               TextColor="White"
                Style="{DynamicResource ListItemDetailTextStyle}"/>
-        <Label Text="{Binding Restaurant.Phone}"
+        <Label Text="{Binding Restaurant.phone}"
+               TextColor="White"
                Style="{DynamicResource ListItemDetailTextStyle}"/>
       </StackLayout>
     </StackLayout>
 
     <ContentView Padding="20" BackgroundColor="#3498db">
       <StackLayout Orientation="Horizontal" VerticalOptions="LayoutOptions.Center" >
-          <Label Text="{Binding RestaurantDetail.Name}"
+          <Label Text="{Binding RestaurantDetail.name}"
                  TextColor="White"
                  FontSize="28"
                  Style="{DynamicResource ListItemTextStyle}"/>
 
           <StackLayout Orientation="Horizontal" HorizontalOptions="LayoutOptions.End" VerticalOptions="LayoutOptions.Center" Padding="0,0,15,0">
               <Label Text="Precio Menú:" FontSize="18"/>
-              <Label Text="{Binding DailyMenuList.Price}" FontSize="18"/>
+              <Label Text="{Binding DailyMenuList.price}" FontSize="18"/>
               <Label Text="Medio Menú:" FontSize="18"/>
-              <Label Text="{Binding DailyMenuList.HalfPrice}" FontSize="18"/>
+              <Label Text="{Binding DailyMenuList.halfPrice}" FontSize="18"/>
           </StackLayout>
       </StackLayout>
     </ContentView>
