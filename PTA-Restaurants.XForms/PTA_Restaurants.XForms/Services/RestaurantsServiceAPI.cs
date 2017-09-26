@@ -13,10 +13,10 @@ namespace PTA_Restaurants.XForms.Services
 {
     class RestaurantsServiceAPI
     {
-        private string RestaurantsListURLBase = "http://nrestaurante-neuronable.rhcloud.com/ws/api/restaurant/v2/summary/1/{0}/{1}/{2}"; // año/mes/día
+        private string RestaurantsListURLBase = "http://nrestaurante-neuronable.rhcloud.com/ws/api/restaurant/public/v1/summary/1/{0}/{1}/{2}"; // año/mes/día
         private string ImagesURLBase = "http://nrestaurante-neuronable.rhcloud.com/images/logos/{0}"; // nombre de la imagen: propiedad 'logo'
-        private string RestaurantDetailURLBase = "http://nrestaurante-neuronable.rhcloud.com/ws/api/restaurant/v2/menu/{0}/{1}/{2}/{3}"; // id de restaurante/año/mes/día
-        private string RestaurantDetailMenuURLBase = "http://nrestaurante-neuronable.rhcloud.com/ws/api/product/v2/category/{0}"; // Id de categoría
+        private string RestaurantDetailURLBase = "http://nrestaurante-neuronable.rhcloud.com/ws/api/restaurant/public/v1/menu/{0}/{1}/{2}/{3}"; // id de restaurante/año/mes/día
+        private string RestaurantDetailMenuURLBase = "http://nrestaurante-neuronable.rhcloud.com/ws/api/product/public/v1/category/{0}"; // Id de categoría
 
         /// <summary>
         /// 

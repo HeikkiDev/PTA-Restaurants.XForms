@@ -41,13 +41,13 @@
             Style="{DynamicResource ListItemDetailTextStyle}"/>
 
     <StackLayout Orientation="Horizontal" HorizontalOptions="LayoutOptions.End"  Padding="0,0,45,0">
-      <Label Text="{Binding RestaurantDetail.price1}" TextColor="White" IsVisible="{Binding IsVisiblePrice1}" FontSize="10"/>
-      <Label Text="/" IsVisible="{Binding IsVisiblePrice2}" FontSize="10"/>
-      <Label Text="{Binding RestaurantDetail.price2}" TextColor="White" IsVisible="{Binding IsVisiblePrice2}" FontSize="10"/>
-      <Label Text="/" IsVisible="{Binding IsVisiblePrice3}" FontSize="10"/>
-      <Label Text="{Binding RestaurantDetail.price3}" TextColor="White" IsVisible="{Binding IsVisiblePrice3}" FontSize="10"/>
-      <Label Text="/" IsVisible="{Binding IsVisiblePrice4}" FontSize="10"/>
-      <Label Text="{Binding RestaurantDetail.price4}" TextColor="White" IsVisible="{Binding IsVisiblePrice4}" FontSize="10"/>
+      <Label Text="{Binding RestaurantDetail.price1}" TextColor="White" IsVisible="{Binding IsVisiblePrice1}" FontSize="16"/>
+      <Label Text="/" IsVisible="{Binding IsVisiblePrice2}" FontSize="16"/>
+      <Label Text="{Binding RestaurantDetail.price2}" TextColor="White" IsVisible="{Binding IsVisiblePrice2}" FontSize="16"/>
+      <Label Text="/" IsVisible="{Binding IsVisiblePrice3}" FontSize="16"/>
+      <Label Text="{Binding RestaurantDetail.price3}" TextColor="White" IsVisible="{Binding IsVisiblePrice3}" FontSize="16"/>
+      <Label Text="/" IsVisible="{Binding IsVisiblePrice4}" FontSize="16"/>
+      <Label Text="{Binding RestaurantDetail.price4}" TextColor="White" IsVisible="{Binding IsVisiblePrice4}" FontSize="16"/>
     </StackLayout>
 
     <!--Aquí irán los diferentes platos-->
@@ -79,25 +79,25 @@
               <Label Text="{Binding price1}"
                      TextColor="White"
                      IsVisible="{Binding IsVisiblePrice1}"
-                     FontSize="10"
+                     FontSize="16"
                      Style="{DynamicResource ListItemDetailTextStyle}"/>
-              <Label Text="/" IsVisible="{Binding IsVisiblePrice2}" FontSize="10"/>
+              <Label Text="/" IsVisible="{Binding IsVisiblePrice2}" FontSize="16"/>
               <Label Text="{Binding price2}"
                      TextColor="White"
                      IsVisible="{Binding IsVisiblePrice2}"
-                     FontSize="10"
+                     FontSize="16"
                      Style="{DynamicResource ListItemDetailTextStyle}"/>
-              <Label Text="/" IsVisible="{Binding IsVisiblePrice3}" FontSize="10"/>
+              <Label Text="/" IsVisible="{Binding IsVisiblePrice3}" FontSize="16"/>
               <Label Text="{Binding price3}"
                      TextColor="White"
                      IsVisible="{Binding IsVisiblePrice3}"
-                     FontSize="10"
+                     FontSize="16"
                      Style="{DynamicResource ListItemDetailTextStyle}"/>
-              <Label Text="/" IsVisible="{Binding IsVisiblePrice4}" FontSize="10"/>
+              <Label Text="/" IsVisible="{Binding IsVisiblePrice4}" FontSize="16"/>
               <Label Text="{Binding price4}"
                      TextColor="White"
                      IsVisible="{Binding IsVisiblePrice4}"
-                     FontSize="10"
+                     FontSize="16"
                      Style="{DynamicResource ListItemDetailTextStyle}"/>
               </StackLayout>
               
